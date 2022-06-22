@@ -14,28 +14,35 @@ app.get("/",function(req,res){
 });
 
 app.get("/home",function(req,res){
-    let info="Walchand College of Engineering is a college in the city of Sangli, Maharashtra, India. The WCE campus is situated on nearly 90 acres of land in Vishrambag, roughly midway between the twin cities of Sangli and Miraj.The college was established in 1947 by the Dhondumama Sathe ..."
+    let info="Walchand College of Engineering is a college in the city of Sangli, Maharashtra, India. The WCE campus ..."
     res.render("home",{content:info});
+});
+app.get("/forum",function(req,res){
+    res.render("forum");
 });
 
 app.post("/",function(req,res){
-    let flag1=0;
-    uname.forEach(function(ele){
-        if(req.body.userName===ele){
-            flag1=1;
-        }    
-    });
-    let flag2=0;
-    pass.forEach(function(ele){
-        if(ele===req.body.userPass){
-            flag2=1;
+    try {
+        let flag1 = 0;
+        uname.forEach(function (ele) {
+            if (req.body.userName === ele) {
+                flag1 = 1;
+            }
+        });
+        let flag2 = 0;
+        pass.forEach(function (ele) {
+            if (ele === req.body.userPass) {
+                flag2 = 1;
+            }
+        });
+        if ((flag1 + flag2) === 2) {
+            res.redirect("/home");
         }
-    });
-    if((flag1+flag2)!=2){
-        alert("Hello");
-    }else{
-        res.redirect("/home");
+    } catch (error) {
+        res.status(400).send("Invalid Details. Try again.");
     }
+     
+    
 })
 
 
