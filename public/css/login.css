@@ -1,0 +1,60 @@
+html{
+    display: inline-block;
+}
+body {
+    background: linear-gradient(to left, #001C34,  #014D8B);
+    margin: 10px;
+}
+.box{
+    margin-left: 37%;
+    padding: 25px;
+    padding-right: 45px;
+    padding-left: 45px;
+    width: 26%;
+    border: solid 2px black;
+    background: linear-gradient(to left, #014378 ,#042544);
+    border-radius: 7px;
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.6);
+}
+.sub-box{
+    font-size: 20px;
+    align-items: left;
+    padding-block-end: 20px;
+}
+.psw{
+    float: right;;
+}
+a{
+    color: white;
+}
+button{
+    font-size: 16px;
+    background-color: #00A0DE;
+    width: 100%;
+    padding: 6px 20px;
+    color: white;
+}
+button:hover { 
+    opacity: 0.8;
+  }
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #00355F;
+    font-size: 17px;
+    color: white;
+  }
+.heading{
+    font-size: 30px;
+}
+a:hover{
+    color: aqua;
+}
+#wcesym{
+    float: right;
+}

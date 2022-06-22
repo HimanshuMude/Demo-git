@@ -1,0 +1,25 @@
+<%-include("partials/header_login")-%>
+<img src="/css/imag/wcetalksym.png" alt="wce talks symbol" height="100">
+    <img src="/css/imag/wcesym.png" alt="wce symbol" height="100" id="wcesym">
+    <div class="box">
+        <h2 class="heading" align="center">Login</h2>
+        <form action="/" method="post">
+            <div class="sub-box">
+                <label for="username">Username</label>
+                <input type="text" name="userName" placeholder="Enter Username" autocomplete="off">
+            </div>
+            <div class="sub-box">
+                <label for="password">Password</label>
+                <input type="password" name="userPass" placeholder="Enter Password">
+            </div>
+            <div class="sub-box">
+                <label id="checkk"><input type="checkbox" checked="checked" name="remember"> Remember me</label>     
+                <span class="psw" id="float"><a href="#">Forgot password?</a></span> 
+            </div>
+            <div class="sub-box">
+                <button type="submit" name="button" >LOGIN <a href="/home"></a></button>
+            </div>
+        </form>
+    </div>
+
+<%-include("partials/footer_login")-%>
